@@ -9,3 +9,6 @@ curl -i -H "Authorization: Bearer YOUR_PAT_TOKEN" -H "Accept: application/json" 
 
 
 =SUMPRODUCT(--ISNUMBER(SEARCH(rpt_table_columns!$A$2:$A$1000,F2)),--ISNUMBER(SEARCH(rpt_table_columns!$B$2:$B$1000,F2)))>0
+
+
+=SUMPRODUCT((rpt_table_columns!$A$2:$A$1000<>"")*(rpt_table_columns!$B$2:$B$1000<>"")*ISNUMBER(SEARCH(rpt_table_columns!$A$2:$A$1000,F2))*ISNUMBER(SEARCH(rpt_table_columns!$B$2:$B$1000,F2)))>0
